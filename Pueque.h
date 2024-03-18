@@ -22,6 +22,7 @@ namespace task_3 {
         void add(const E &element);
         const E *pull();
         const E *peek();
+        bool isEmpty();
     private:
         puequeNode<E> *dummy = new puequeNode<E>;
         puequeNode<E> *head;
@@ -72,6 +73,11 @@ namespace task_3 {
         }
 
         return head->next->value;
+    }
+
+    template <class E>
+    bool Pueque<E>::isEmpty() {
+        return head == tail;
     }
 
 } // task_3

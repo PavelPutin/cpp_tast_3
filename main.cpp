@@ -12,6 +12,8 @@ int main() {
     std::cout << *(p->pull()) << std::endl;
     std::cout << *(p->pull()) << std::endl;
     p->add(7);
-    std::cout << *(p->pull()) << std::endl;
+    std::cout << *(p->peek()) << std::endl;
+    p->add(8);
+    std::cout << *(p->peek()) << std::endl;
     return 0;
 }
