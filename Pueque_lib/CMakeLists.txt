@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.27)
+project(Pueque)
+
+set(HEADER_FILES
+        Pueque.h
+)
+
+set(SOURCE_FILES
+        Pueque.cpp
+)
+
+add_library(Pueque_lib STATIC ${SOURCE_FILES} ${HEADER_FILES})

@@ -4,4 +4,10 @@ project(cpp_tast_3)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(cpp_tast_3 main.cpp
-        Pueque.h)
+        Pueque_lib/Pueque.h)
+
+add_subdirectory(Pueque_lib)
+add_subdirectory(Google_tests)
+
+target_link_libraries(cpp_tast_3 Pueque_lib)
+target_link_libraries(cpp_tast_3 gtest gtest_main)
