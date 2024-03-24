@@ -41,7 +41,6 @@ namespace task_3 {
         while (head != tail) {
             puequeNode<E> *toDelete = head;
             head = head->next;
-            delete toDelete->value;
             delete toDelete;
         }
     }
