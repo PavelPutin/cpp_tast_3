@@ -39,6 +39,7 @@ namespace task_3 {
     template <class E>
     Pueque<E>::~Pueque() {
         while (head != tail) {
+            // todo: разобраться с удалением элементов
             puequeNode<E> *toDelete = head;
             head = head->next;
             delete toDelete;
