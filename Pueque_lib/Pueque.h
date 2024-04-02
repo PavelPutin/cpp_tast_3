@@ -5,6 +5,8 @@
 #ifndef CPP_TAST_3_PUEQUE_H
 #define CPP_TAST_3_PUEQUE_H
 
+#include "PuqueException.h"
+
 namespace task_3 {
 
     template <class E>
@@ -58,7 +60,7 @@ namespace task_3 {
     template <class E>
     const E *Pueque<E>::pull() {
         if (head == tail) {
-            return nullptr;
+            throw PuqueException("Queue is empty");
         }
 
         const E *result = head->next->value;
@@ -69,7 +71,7 @@ namespace task_3 {
     template <class E>
     const E *Pueque<E>::peek() {
         if (head == tail) {
-            return nullptr;
+            throw PuqueException("Queue is empty");
         }
 
         return head->next->value;

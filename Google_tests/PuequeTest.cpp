@@ -48,3 +48,15 @@ TEST_F(PuqueFixture, PeekTest)
 
     EXPECT_FALSE(p->isEmpty());
 }
+
+TEST_F(PuqueFixture, ExceptionTest)
+{
+    try {
+        p->pull();
+        FAIL();
+    } catch (PuqueException &e) {
+        SUCCEED();
+    } catch(...) {
+        FAIL();
+    }
+}
